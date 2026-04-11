@@ -26,20 +26,20 @@ header{
 
 .header-logo{
     display: flex;
-    max-width: 100%;
-}
-
-.header-logo img{
-    width: 70%;
-    height: auto;
+    justify-content: flex-start;
+    
 }
 
 .logo{
-    padding-top: 0px;
+    max-width: 10%;
+    height: 10%;
 }
 
-.shopname {
-    padding-top: 3%;
+.shopname{
+    max-width: 60%;
+    height: 60%;
+    margin-top: 2%;
+    margin-left: 3%;
 }
 
 .main-menu {
@@ -572,17 +572,128 @@ footer{
 
 .footer-logo{
     display: flex;
-    max-width: 100%;
-    margin-bottom: 60px;
+    justify-content: flex-start;
+    margin-bottom: 7%;
 }
 
-.footer-logo img{
-    width: 70%;
-    height: auto;
+.section{
+    display: none;
+    width: 100%;
 }
 
-.logo-bottom{
-    padding-top: 2%;
+.s_01 .accordion_one {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.s_01 .accordion_one .accordion_header {
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3% 6%;
+    text-align: left;
+    position: relative;
+    z-index: +1;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.s_01 .accordion_one .accordion_header:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.s_01 .accordion_one .accordion_header .i_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    box-sizing: border-box;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+}
+
+.s_01 .accordion_one .accordion_header .i_box .one_i {
+    display: block;
+    width: 12px;
+    height: 12px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform-origin: center center;
+    transition-duration: 0.2s;
+    position: relative;
+}
+
+.s_01 .accordion_one .accordion_header.open .i_box {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+}
+
+.s_01 .accordion_one .accordion_header .i_box .one_i:before, .s_01 .accordion_one .accordion_header .i_box .one_i:after {
+    display: flex;
+    content: '';
+    background-color: #fff;
+    width: 12px;
+    height: 2px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transform-origin: center center;
+}
+.s_01 .accordion_one .accordion_header .i_box .one_i:before {
+    width: 2px;
+    height: 12px;
+    top: 0;
+    left: 5px;
+}
+.s_01 .accordion_one .accordion_header.open .i_box .one_i:before {
+    content: none;
+}
+.s_01 .accordion_one .accordion_header.open .i_box .one_i:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.s_01 .accordion_one .accordion_inner {
+    display: none;
+    text-align: center;
+    padding: 7% 0 130px;
+    border-bottom: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.s_01 .accordion_one .accordion_inner .box_one {
+    height: 300px;
+}
+.s_01 .accordion_one .accordion_inner p.txt_a_ac {
+    margin: 0;
+}
+
+.label-ac-li{
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.label-ac-li:hover{
+    opacity: 0.5;
+    transition: all .5s;
+}
+
+.group-ac{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap:25px
 }
 
 .list-all{
@@ -674,16 +785,9 @@ footer{
         height: 75px;
         padding: 0px 20px;
     }
+    
     .header-logo{
         max-width: 55%;
-    }
-
-    .logo{
-        padding-top: 1%;
-    }
-
-    .shopname{
-        padding-top: 4%;
     }
 
     .main-menu{
@@ -782,8 +886,7 @@ footer{
     }
 
     .about::before{
-        width: 85%;
-        height: 480px;
+        width: 100%;
     }
 
     .about-inr{
@@ -822,9 +925,7 @@ footer{
     }
 
     .about::after{
-        bottom: 54%;
-        width: 60%;
-        height: 38%;
+        display: none;
     }
 
     .menu{
@@ -904,16 +1005,18 @@ footer{
 
     .footer-wrapper{
         display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         padding: 5% 8%;
     }
 
     .footer-logo{
         order: 1;
-        width: 50%;
-        max-width: 50%;
-        margin-bottom: 6%;
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin-top: 8%;
+        margin-bottom: 8%;
     }
 
     .list{
@@ -924,38 +1027,50 @@ footer{
         font-size: 12px;
     }
 
+    .list-border{
+        text-align: center;
+        border-bottom: 1px solid #fff;
+    }
+
     .group{
+        flex-wrap: wrap;
         border-left: none;
         padding-left: 0;
+        margin: 8% 0;
         gap: 25px;
     }
 
     .list-all {
-        order: 3;
+        order: 4;
+        flex-direction: column;
         width: 100%;
         margin-bottom: 8%;
     }
     
     .snslist{
         order: 2;
-        width: 50%;
-        justify-content: flex-end;
-        align-items: center;
-        margin-bottom: 6%;
+        width: 60%;
+        justify-content: center;
+        margin-bottom: 10%;
         gap: 5%;
     }
 
     .icon{
-        width: 80%;
+        width: 90%;
     }
 
     .copyright{
-        order: 4;
+        order: 5;
         width: 100%;
     }
 
     .size12{
         font-size: 8px;
+    }
+
+    .section{
+        display: flex;
+        order: 3;
     }
 
 }
@@ -966,17 +1081,9 @@ footer{
         padding: 0px 13px;
     }
 
-    .logo{
-        padding-top: 3%;
-    }
-
     nav {
         left: -150px;
         width: 150px;
-    }
-
-    .shopname {
-        padding-top: 5%;
     }
 
     .main-visual{
@@ -1125,22 +1232,8 @@ footer{
     }
 
     .footer-logo{
-        order: 1;
-        width: 50%;
-        max-width: 50%;
-        margin-bottom: 3%;
-    }
-
-    .footer-logo img{
-        width: 70%;
-    }
-
-    .logo-bottom {
-        padding-top: 3%;
-    }
-
-    .list-border0{
-        display: none;
+        margin-top: 6%;
+        margin-bottom: 4%;
     }
     
     .group{
@@ -1151,12 +1244,8 @@ footer{
         font-size: 11px;
     }
 
-    .list-all {
-        margin-bottom: 8%;
-    }
-    
     .snslist{
-        margin-bottom: 3%;
+        margin-bottom: 6%;
         gap: 2%;
     }
 
@@ -1165,7 +1254,11 @@ footer{
     }
 
     .size12{
-        font-size: 8px;
+        font-size: 10px;
+    }
+
+    .s_01 .accordion_one .accordion_inner {
+        padding: 8% 0 100px;
     }
 
 }
